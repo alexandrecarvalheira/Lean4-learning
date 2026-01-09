@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 31, 41, 55;
+  --background-end-rgb: 17, 24, 39;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+/* Code editor styles */
+.monaco-editor {
+  border-radius: 8px;
+}
+
+/* Lesson content styles */
+.lesson-content h1 {
+  @apply text-3xl font-bold mb-4 text-blue-400;
+}
+
+.lesson-content h2 {
+  @apply text-2xl font-semibold mb-3 text-blue-300;
+}
+
+.lesson-content h3 {
+  @apply text-xl font-medium mb-2 text-gray-200;
+}
+
+.lesson-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+.lesson-content code {
+  @apply bg-gray-800 px-2 py-1 rounded text-green-400 font-mono text-sm;
+}
+
+.lesson-content pre {
+  @apply bg-gray-900 p-4 rounded-lg mb-4 overflow-x-auto;
+}
+
+.lesson-content ul {
+  @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.lesson-content ol {
+  @apply list-decimal list-inside mb-4 space-y-2;
+}
+
+/* Success/Error feedback */
+.feedback-success {
+  @apply bg-green-900/50 border border-green-500 text-green-300 p-4 rounded-lg;
+}
+
+.feedback-error {
+  @apply bg-red-900/50 border border-red-500 text-red-300 p-4 rounded-lg;
+}
+
+.feedback-info {
+  @apply bg-blue-900/50 border border-blue-500 text-blue-300 p-4 rounded-lg;
+}
